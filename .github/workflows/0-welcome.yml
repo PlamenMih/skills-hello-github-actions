@@ -1,4 +1,4 @@
-name: Step 0, Welcome
+name: Post welcome comment
 
 # This step triggers after the learner creates a new repository from the template.
 # This workflow updates from step 0 to step 1.
@@ -10,6 +10,11 @@ on:
   push:
     branches:
       - main
+
+  pull_request:
+    types: [opened]
+
+
 
 # Reference: https://docs.github.com/en/actions/security-guides/automatic-token-authentication
 permissions:
